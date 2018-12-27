@@ -1,0 +1,152 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overscroll-behavior: none;
+  text-align: center;
+  cursor: default;
+}
+
+body {
+  background: #5A5565;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  color: #9b7869
+}
+
+/* -- HEADER / FOOTER -- */
+
+header {
+  background: #463444;
+  padding: .4em;
+  text-transform: uppercase;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+h1{
+  font-size: 1.5em;
+  font-weight: 250;
+  margin: 0; 
+  color: #faec2fa9
+}
+
+footer {
+  margin-bottom: 2em;
+  background: #463444;
+}
+
+/*-- MAIN --*/
+
+main {
+  margin-top: 3.5em;
+}
+
+article {
+  padding: .7em;
+} 
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #faec2fa9;
+}
+
+h4 {
+  color: #9d8d89;
+  letter-spacing: .1em;
+  margin: .7em 0 0 0;
+} 
+
+p {
+  text-align: justify;
+}
+
+section a img {
+  margin-top: .7em;
+  max-width: 100%;
+}
+
+.anchor {
+  display:block;
+  height:63px; 
+  margin-top:-4em; 
+  visibility:hidden;
+}
+
+/*-- SKILLS GRID --*/
+
+  #skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+  }
+
+  ul {
+    list-style: none;
+    padding: 0
+  }
+
+  /*-- LINKS -- */
+  nav, .contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    margin: .4em 0;
+    cursor: pointer;
+  }
+  
+  nav a, .contact-links a, h4 a {
+    text-decoration: none;
+    color: #9d8d89;
+    margin: 0;
+  }
+  
+  h4 a:visited {
+    text-decoration: none;
+    color: #9d8d89;
+    margin: 0;
+  }
+
+  /*--MEDIA QUERIES--*/
+
+  @media screen and (min-width: 600px) {
+    body {
+      display: grid;
+      grid-template-columns: auto 750px auto;
+    }
+
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    nav a{
+      margin: 0 1em
+    }
+
+    main {
+      grid-column: 2 / 3
+    }
+
+    footer {
+      grid-column: 1 / -1;
+
+    }
+
+    .contact-links {
+      margin-left: 8em;
+      margin-right: 8em
+    }
+  }
+
+  
